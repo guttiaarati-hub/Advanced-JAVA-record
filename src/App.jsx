@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
-import { FileText, ChevronRight, Menu, X } from 'lucide-react';
+import { FileText, ChevronRight, Menu, X, Download } from 'lucide-react';
 import * as mammoth from 'mammoth';
 
 // Import all week documents
@@ -69,6 +69,15 @@ const JavaLabViewer = () => {
     setSidebarOpen(false); // Close sidebar on mobile after selection
   };
 
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = weekFiles[selectedWeek];
+    link.download = `week-${selectedWeek}.docx`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="h-screen flex flex-col bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900">
       {/* Top Header - Profile Section */}
@@ -100,11 +109,11 @@ const JavaLabViewer = () => {
             {/* Student Info */}
             <div className="flex-1 min-w-0">
               <h1 className="text-base sm:text-xl lg:text-2xl font-bold text-white mb-1 tracking-wide truncate">
-                Gutti Aarati
+                Pandu Ranga Sai Manikanta T
               </h1>
               <div className="flex items-center gap-2 sm:gap-4">
                 <p className="text-gray-300 text-xs sm:text-sm font-medium">
-                  <span className="text-gray-400">Roll:</span> <span className="text-white font-semibold">238W1A1291</span>
+                  <span className="text-gray-400">Roll:</span> <span className="text-white font-semibold">238W1A1290</span>
                 </p>
               </div>
             </div>
@@ -176,6 +185,13 @@ const JavaLabViewer = () => {
                 <h2 className="text-lg sm:text-xl font-bold text-gray-800">Week {selectedWeek}</h2>
                 <p className="text-xs sm:text-sm text-gray-600 mt-1">Laboratory Record</p>
               </div>
+              <button
+                onClick={handleDownload}
+                className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-gradient-to-r from-slate-700 to-gray-700 hover:from-slate-600 hover:to-gray-600 text-white rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-xs sm:text-sm font-medium"
+              >
+                <Download className="w-4 h-4" />
+                <span className="hidden sm:inline">Download</span>
+              </button>
             </div>
           </div>
 
