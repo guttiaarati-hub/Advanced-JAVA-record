@@ -17,9 +17,6 @@ import week10 from './assets/week-10.docx';
 import week11 from './assets/week-11.docx';
 import week12 from './assets/week-12.docx';
 
-// Import profile image
-import profileImage from './assets/profile.jpg';
-
 const JavaLabViewer = () => {
   const [selectedWeek, setSelectedWeek] = useState(1);
   const [documentContent, setDocumentContent] = useState('');
@@ -76,29 +73,28 @@ const JavaLabViewer = () => {
       <div className="bg-gradient-to-r from-slate-800 via-gray-700 to-slate-800 shadow-2xl border-b border-gray-600/30">
         <div className="max-w-7xl mx-auto px-8 py-6">
           <div className="flex items-center gap-6">
-            {/* Profile Picture */}
+            {/* Professional Record Icon */}
             <div className="relative">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-gray-600 to-slate-700 p-1 shadow-2xl ring-2 ring-gray-500/50">
-                <img 
-                  src={profileImage} 
-                  alt="Profile" 
-                  className="w-full h-full rounded-full object-cover"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                  }}
-                />
+              <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-slate-700 to-gray-800 shadow-2xl ring-2 ring-gray-500/50 flex items-center justify-center">
+                <svg className="w-12 h-12 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
               </div>
-              <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-emerald-500 rounded-full border-4 border-slate-800 shadow-lg"></div>
+              <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-blue-500 rounded-lg border-4 border-slate-800 shadow-lg flex items-center justify-center">
+                <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+              </div>
             </div>
             
             {/* Student Info */}
             <div className="flex-1">
               <h1 className="text-2xl font-bold text-white mb-1 tracking-wide">
-                Pandu Ranga Sai Manikanta T
+                Gutti Aarati
               </h1>
               <div className="flex items-center gap-4">
                 <p className="text-gray-300 text-sm font-medium">
-                  <span className="text-gray-400">Roll:</span> <span className="text-white font-semibold">238W1A1290</span>
+                  <span className="text-gray-400">Roll:</span> <span className="text-white font-semibold">238W1A1291</span>
                 </p>
               </div>
             </div>
