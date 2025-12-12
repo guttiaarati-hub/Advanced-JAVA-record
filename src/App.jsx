@@ -100,11 +100,11 @@ const JavaLabViewer = () => {
             {/* Student Info */}
             <div className="flex-1 min-w-0">
               <h1 className="text-base sm:text-xl lg:text-2xl font-bold text-white mb-1 tracking-wide truncate">
-                Pandu Ranga Sai Manikanta T
+                Gutti Aarati
               </h1>
               <div className="flex items-center gap-2 sm:gap-4">
                 <p className="text-gray-300 text-xs sm:text-sm font-medium">
-                  <span className="text-gray-400">Roll:</span> <span className="text-white font-semibold">238W1A1290</span>
+                  <span className="text-gray-400">Roll:</span> <span className="text-white font-semibold">238W1A1291</span>
                 </p>
               </div>
             </div>
